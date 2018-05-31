@@ -1,0 +1,52 @@
+	body{text-align:center}
+	#wetter{
+		background-color:#d2cfc6;
+		border-radius:20px;
+		border:2px solid black;
+	}
+	.Zeitpunkt{font-size:120%;padding:0px;margin:0px}
+	.wetterDaten{
+		background-color:#33adff;
+		margin:0px;
+		padding:0px
+	}
+	.row{
+		padding: 0px;
+		margin: 0px;
+	}
+.btnCity {
+    background-color:#cccccc;
+    color:black;
+    padding:5px 5px 5px 5px;
+    font-size:16px;
+    border:none;
+    cursor:pointer;
+    width:150px;
+    outline:none;
+}
+.btnCity:hover, .btnCity:focus {
+    background-color:#949494;
+}
+.dropdown-container {
+    position:relative;
+}
+#dropdown
+{
+    position:absolute;
+    background-color:#fcfdff;
+    width:150px;
+	z-index:2;
+}
+#dropdown button
+{
+    color:black;
+    border-bottom:1px solid #acacac;
+    padding:5px 5px;
+    display:block;
+    cursor:pointer;
+    width:150px;
+    box-shadow:none;
+}
+#dropdown button:hover {
+    background-color:#cecece;
+}
