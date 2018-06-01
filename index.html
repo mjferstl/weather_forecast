@@ -8,6 +8,9 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+<!-- contains loading animation -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
  <!-- styles -->
 <link rel="stylesheet" href="weather.css">
@@ -25,14 +28,12 @@
 	  <div class="col-sm-12"><h1 id="cityTitle">Wetter</h1></div>
 	</div>
 	<div class="row">
-	  <div class="col-sm-4" style="float:left">
-		Stadt<br>
-        <button onclick="openMenu()" class="btnCity" id="aktCity">Regensburg</button>
-        <div id="dropdown">
-            <button onclick="changeCity('Regensburg')">Regensburg</button>
-            <button onclick="changeCity('München')">München</button>
-			<button onclick="changeCity('Berlin')">Berlin</button>
-        </div>
+	  <div class="col-sm-4" id="dropdown-content">
+		<div style="float:left;padding-top:10px;padding-bottom:10px">
+			<button onclick="openMenu()" class="btnCity" id="aktCity"><i id="loading" class="fa fa-circle-o-notch fa-spin"> </i>Stadt wählen</button>
+			<div id="dropdown">
+			</div>
+		</div>
 	  </div>
 	  <div class="col-sm-4">
 		<div id="wetter">

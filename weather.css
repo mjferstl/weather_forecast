@@ -1,19 +1,25 @@
-	body{text-align:center}
-	#wetter{
-		background-color:#d2cfc6;
-		border-radius:20px;
-		border:2px solid black;
-	}
-	.Zeitpunkt{font-size:120%;padding:0px;margin:0px}
-	.wetterDaten{
-		background-color:#33adff;
-		margin:0px;
-		padding:0px
-	}
-	.row{
-		padding: 0px;
-		margin: 0px;
-	}
+body{
+	text-align:center;
+}
+#wetter{
+	background-color:#d2cfc6;
+	border-radius:20px;
+	border:2px solid black;
+}
+.Zeitpunkt{+
+	font-size:120%;
+	padding:0px;
+	margin:0px;
+}
+.wetterDaten{
+	background-color:#0288d1;
+	margin:0px;
+	padding:0px
+}
+.row{
+	padding: 0px;
+	margin: 0px;
+}
 .btnCity {
     background-color:#cccccc;
     color:black;
@@ -25,22 +31,24 @@
     outline:none;
 }
 .btnCity:hover, .btnCity:focus {
-    background-color:#949494;
+    background-color:#a3a3a3;
 }
-.dropdown-container {
+#dropdown-content {
     position:relative;
 }
-#dropdown
-{
+#dropdown {
     position:absolute;
+	top:44px;
+	bottom:0;
+	left:15px;
     background-color:#fcfdff;
     width:150px;
 	z-index:2;
 }
-#dropdown button
-{
+#dropdown button {
     color:black;
     border-bottom:1px solid #acacac;
+	border-right:none;
     padding:5px 5px;
     display:block;
     cursor:pointer;

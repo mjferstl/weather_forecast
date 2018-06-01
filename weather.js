@@ -1,9 +1,8 @@
 
 var aktCity = "Regensburg";
+var city = ["Regensburg","Schwarzach","München","Berlin","Hamburg","Lima","Denpasar"];
+var code = ["2849483","2835184","2867714","2950159","2911298","3936456","1645528"];
 var cities = [];
-cities["Regensburg"] = "2849483";
-cities["München"] = "2867714";
-cities["Berlin"] = "2950159";
 var apikey = '141a1f2e6d8f32c5c68f011d6e28df08';
 var URLbase = 'https://api.openweathermap.org/data/2.5/';//weather?id=2849483&units=metric&APPID=141a1f2e6d8f32c5c68f011d6e28df08;
 var maxCols = 6;
@@ -129,16 +128,23 @@ function openMenu()
 }
 
 function changeCity(city) {
-    aktCity = city;
-    //alert(aktCity);
-    $("#aktCity").text(aktCity );
-    $("#dropdown").hide();
-	$("#cityTitle").html('Wetter in '+ aktCity);
-	getWeatherData();
-    
+	if (city != aktCity) {
+		$("#loading").show();
+		aktCity = city;
+		$("#cityTitle").html('Wetter in '+ aktCity);
+		getWeatherData();
+		//setInterval(function(){getWeatherData()},20*60*1000);
+    }
+	$("#dropdown").hide();
+	$("#loading").hide();
 }
 
 $(function() {
+	for (i=0; i<city.length; i++) {
+		cities[city[i]] = code[i];
+		$("#dropdown").append('<button onclick="changeCity(\''+city[i]+'\')">'+city[i]+'</button>');
+	}
+	$("#loading").hide();
     $("#dropdown").hide();
 	getWeatherData();
 	setInterval(function(){getWeatherData()},20*60*1000); // Update-Intervall: 20 min
